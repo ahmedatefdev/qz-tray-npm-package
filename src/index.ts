@@ -1,3 +1,5 @@
 import MyCounter from "./components/App";
-
-export { MyCounter };
+function useeeeme(params: string) {
+  console.log("🚀 ~ file: index.ts:3 ~ useeeeme ~ params:", params);
+}
+export { MyCounter, useeeeme };
