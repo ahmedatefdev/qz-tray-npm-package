@@ -1,7 +1,7 @@
 import { __assign, __awaiter, __extends, __generator } from "tslib";
 import React, { Component } from "react";
 import ReactPortal from "./ReactPortal";
-// import "./style.css";
+import "../css/style.css";
 import printerQz from "../utils/printQZ";
 import { init, disconnectQZ, handleLaunchQzSoftware, updateSettingsQzSavedSetting, } from "../utils/printUtils";
 var currentPrinterData = {

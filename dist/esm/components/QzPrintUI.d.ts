@@ -1,4 +1,5 @@
 import { Component } from "react";
+import "../css/style.css";
 export default class QZPrintUI extends Component {
     state: {
         printers: never[];

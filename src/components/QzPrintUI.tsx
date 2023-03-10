@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactPortal from "./ReactPortal";
-// import "./style.css";
+import "../css/style.css";
 import printerQz from "../utils/printQZ";
 
 import {

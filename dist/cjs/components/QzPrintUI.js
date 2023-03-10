@@ -3,7 +3,7 @@ exports.__esModule = true;
 var tslib_1 = require("tslib");
 var react_1 = tslib_1.__importStar(require("react"));
 var ReactPortal_1 = tslib_1.__importDefault(require("./ReactPortal"));
-// import "./style.css";
+require("../css/style.css");
 var printQZ_1 = tslib_1.__importDefault(require("../utils/printQZ"));
 var printUtils_1 = require("../utils/printUtils");
 var currentPrinterData = {
