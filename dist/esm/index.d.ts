@@ -1,3 +1,4 @@
 import MyCounter from "./components/App";
-declare function useeeeme(params: string): void;
-export { MyCounter, useeeeme };
+import QZPrintUI from "./components/QzPrintUI";
+declare function testNPM(str: string): void;
+export { MyCounter, testNPM, QZPrintUI };

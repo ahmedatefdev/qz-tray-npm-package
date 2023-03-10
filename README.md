@@ -5,7 +5,7 @@
 ![npm-typescript]
 [![License][github-license]][github-license-url]
 
-This repo is the example of the article ["How to create and publish React Typescript npm package with demo and automated build"](https://medium.com/@igaponov/how-to-create-and-publish-react-typescript-npm-package-with-demo-and-automated-build-80c40ec28aca).
+This repo is for creating qz npm package thats could be shared around noon projects.
 
 You can clone it and step by step create your own NPM package and publish it.
 
@@ -13,14 +13,14 @@ It is simple React counter.
 
 ## Installation:
 
-```bash
-npm install my-react-typescript-package --save-dev
-```
-
-or
+update the project dependencies by the coming package
 
 ```bash
-yarn add -D my-react-typescript-package
+dependencies: {
+...
+"qz-tray-npm-package": "github:ahmedatefdev/qz-tray-npm-package"
+...
+}
 ```
 
 ## Usage :

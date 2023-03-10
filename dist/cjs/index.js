@@ -1,11 +1,13 @@
 "use strict";
 exports.__esModule = true;
-exports.useeeeme = exports.MyCounter = void 0;
+exports.QZPrintUI = exports.testNPM = exports.MyCounter = void 0;
 var tslib_1 = require("tslib");
 var App_1 = tslib_1.__importDefault(require("./components/App"));
 exports.MyCounter = App_1["default"];
-function useeeeme(params) {
-    console.log("🚀 ~ file: index.ts:3 ~ useeeeme ~ params:", params);
+var QzPrintUI_1 = tslib_1.__importDefault(require("./components/QzPrintUI"));
+exports.QZPrintUI = QzPrintUI_1["default"];
+function testNPM(str) {
+    console.log(str + "111111");
 }
-exports.useeeeme = useeeeme;
+exports.testNPM = testNPM;
 //# sourceMappingURL=index.js.map

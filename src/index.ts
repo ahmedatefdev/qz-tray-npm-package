@@ -1,5 +1,8 @@
 import MyCounter from "./components/App";
-function useeeeme(params: string) {
-  console.log("🚀 ~ file: index.ts:3 ~ useeeeme ~ params:", params);
+import QZPrintUI from "./components/QzPrintUI";
+
+function testNPM(str: string) {
+  console.log(str + "111111");
 }
-export { MyCounter, useeeeme };
+
+export { MyCounter, testNPM, QZPrintUI };
