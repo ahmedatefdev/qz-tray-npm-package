@@ -73,21 +73,17 @@ function disconnectQZ() {
 exports.disconnectQZ = disconnectQZ;
 function updateSettingsQzSavedSetting(setting, currentPrinter) {
     return tslib_1.__awaiter(this, void 0, void 0, function () {
-        var selectedPrinter, offsetX, offsetY;
+        var selectedPrinter, offsetX, offsetY, labelOrientation;
         return tslib_1.__generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    selectedPrinter = setting.selectedPrinter, offsetX = setting.offsetX, offsetY = setting.offsetY;
-                    return [4 /*yield*/, printQZ_1["default"].setPrinterConfig({
-                            printer: currentPrinter === undefined || currentPrinter === null ? selectedPrinter : currentPrinter,
-                            offsetX: offsetX,
-                            offsetY: offsetY
-                        })];
-                case 1:
-                    _a.sent();
-                    window.location.reload();
-                    return [2 /*return*/];
-            }
+            selectedPrinter = setting.selectedPrinter, offsetX = setting.offsetX, offsetY = setting.offsetY, labelOrientation = setting.labelOrientation;
+            printQZ_1["default"].setPrinterConfig({
+                printer: currentPrinter === undefined || currentPrinter === null ? selectedPrinter : currentPrinter,
+                offsetX: offsetX,
+                offsetY: offsetY,
+                labelOrientation: labelOrientation !== null && labelOrientation !== void 0 ? labelOrientation : ""
+            });
+            window.location.reload();
+            return [2 /*return*/];
         });
     });
 }

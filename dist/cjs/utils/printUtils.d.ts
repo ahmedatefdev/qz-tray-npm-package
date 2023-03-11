@@ -9,5 +9,6 @@ declare function updateSettingsQzSavedSetting(setting: {
     selectedPrinter: any;
     offsetX: any;
     offsetY: any;
-}, currentPrinter: any): Promise<void>;
+    labelOrientation: string;
+}, currentPrinter?: any): Promise<void>;
 export { init, disconnectQZ, handleLaunchQzSoftware, updateSettingsQzSavedSetting };

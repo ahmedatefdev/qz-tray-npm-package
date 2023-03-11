@@ -1,3 +1,2 @@
-import QZPrintUI from "./components/QzPrintUI";
-declare function testNPM(str: string): void;
-export { testNPM, QZPrintUI };
+import QZPrintUI, { printZplLabels, printPDFs } from "./components/QzPrint";
+export { QZPrintUI, printZplLabels, printPDFs };

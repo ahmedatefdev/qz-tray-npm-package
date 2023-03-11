@@ -83,15 +83,16 @@ function disconnectQZ() {
 }
 
 async function updateSettingsQzSavedSetting(
-  setting: { selectedPrinter: any; offsetX: any; offsetY: any },
-  currentPrinter: any
+  setting: { selectedPrinter: any; offsetX: any; offsetY: any; labelOrientation: string },
+  currentPrinter?: any
 ) {
-  const { selectedPrinter, offsetX, offsetY } = setting;
-  await printerQz.setPrinterConfig({
+  const { selectedPrinter, offsetX, offsetY, labelOrientation } = setting;
+  printerQz.setPrinterConfig({
     printer:
       currentPrinter === undefined || currentPrinter === null ? selectedPrinter : currentPrinter,
     offsetX,
     offsetY,
+    labelOrientation: labelOrientation ?? "",
   });
   window.location.reload();
 }

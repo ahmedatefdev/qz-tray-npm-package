@@ -1,15 +1,8 @@
 # qz-tray-noon
 
-[![NPM version][npm-image]][npm-url]
-[![Build][github-build]][github-build-url]
-![npm-typescript]
-[![License][github-license]][github-license-url]
-
 This repo is for creating qz npm package thats could be shared around noon projects.
 
-You can clone it and step by step create your own NPM package and publish it.
-
-It is simple React counter.
+you can import this package nad use it as comming.
 
 ## Installation:
 
@@ -18,41 +11,67 @@ update the project dependencies by the coming package
 ```bash
 dependencies: {
 ...
-"qz-tray-npm-package": "github:ahmedatefdev/qz-tray-npm-package"
+"qz-tray-noon": "github:fastfishio/qz-tray-noon"
 ...
 }
 ```
 
 ## Usage :
 
-Add `MyCounter` to your component:
+Add `QZPrintUI ` to your component root components :
 
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { MyCounter } from 'my-react-typescript-package'
+import { QZPrintUI } from "qz-tray-noon";
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
     <React.StrictMode>
-        <div>
-            <h2>Default counter</h2>
-            <MyCounter />
-        </div>
-        <hr />
-        <div>
-            <h2>Counter with predefined value</h2>
-            <MyCounter value={5} />
-        </div>
+    ...
+    <QZPrintUI />
+    ...
     </React.StrictMode>,
 )
-
 ```
 
-[npm-url]: https://www.npmjs.com/package/my-react-typescript-package
-[npm-image]: https://img.shields.io/npm/v/my-react-typescript-package
-[github-license]: https://img.shields.io/github/license/gapon2401/my-react-typescript-package
-[github-license-url]: https://github.com/gapon2401/my-react-typescript-package/blob/master/LICENSE
-[github-build]: https://github.com/gapon2401/my-react-typescript-package/actions/workflows/publish.yml/badge.svg
-[github-build-url]: https://github.com/gapon2401/my-react-typescript-package/actions/workflows/publish.yml
-[npm-typescript]: https://img.shields.io/npm/types/my-react-typescript-package
+print printPDFs
+
+```js
+import { printPDFs } from "qz-tray-noon";
+
+printPDFs({ data: "pdf/url" });
+printPDFs({ data: ["pdf/url", "pdf/url2"] });
+printPDFs({ data: "pdf/url", printerName: "HP_Smart_Tank_515" });
+printPDFs({ data: ["pdf/url", "pdf/url2"], printerName: "HP_Smart_Tank_515" });
+```
+
+print printZplLabels
+
+```js
+import { printZplLabels } from "qz-tray-noon";
+
+printZplLabels({
+  data: { qty: 2, id_partner: "id_partner", barcode: "barcode", pbarcode: "pbarcode" },
+});
+
+printZplLabels({
+  data: [
+    { qty: 2, id_partner: "id_partner", barcode: "barcode", pbarcode: "pbarcode" },
+    { qty: 1, id_partner: "id_partner2", barcode: "barcode2", pbarcode: "pbarcode2" },
+  ],
+});
+
+printZplLabels({
+  data: { qty: 2, id_partner: "id_partner", barcode: "barcode", pbarcode: "pbarcode" },
+  printerName: "HP_Smart_Tank_515",
+});
+
+printZplLabels({
+  data: [
+    { qty: 2, id_partner: "id_partner", barcode: "barcode", pbarcode: "pbarcode" },
+    { qty: 1, id_partner: "id_partner2", barcode: "barcode2", pbarcode: "pbarcode2" },
+  ],
+  printerName: "HP_Smart_Tank_515",
+});
+```

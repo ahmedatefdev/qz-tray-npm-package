@@ -1,6 +1,3 @@
-import QZPrintUI from "./components/QzPrintUI";
-function testNPM(str) {
-    console.log(str + "111111");
-}
-export { testNPM, QZPrintUI };
+import QZPrintUI, { printZplLabels, printPDFs } from "./components/QzPrint";
+export { QZPrintUI, printZplLabels, printPDFs };
 //# sourceMappingURL=index.js.map

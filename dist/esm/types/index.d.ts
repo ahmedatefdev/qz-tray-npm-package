@@ -6,7 +6,13 @@ export type TPrintersData = {
     error?: string;
     isLoading?: boolean;
     selectedPrinter?: string;
-    offsetX?: string;
-    offsetY?: string;
+    offsetX?: string | number;
+    offsetY?: string | number;
     labelOrientation?: string;
+};
+export type TZPLLabelData = {
+    qty: number;
+    id_partner: string;
+    barcode: string;
+    pbarcode: string;
 };
